@@ -1,0 +1,15 @@
+---
+- name: tages
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: defiend tages
+      ansible.builtin.debug:
+        msg: "friuts"
+      tags:
+        - anki
+        - hello
+    - name: other defintion tag
+      ansible.builtin.debug:
+        msg: "vegtable"
+      tags: vegtables

@@ -1,0 +1,10 @@
+---
+- name: download the software
+  hosts: all
+  become: true
+  tasks:
+    - name: Download the nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+

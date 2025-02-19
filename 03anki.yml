@@ -1,0 +1,13 @@
+---
+- name: Condition demo
+  hosts: all
+  become: true
+  tasks:
+    - name: x is greaterthan 10
+      when : x|int > 10
+      ansible.builtin.debug:
+        msg: "x is graterthan 10"
+    - name: x is lessthan 10
+      when: x|int < 10
+      ansible.builtin.debug:
+        msg: "x is lessthan 10"

@@ -1,0 +1,8 @@
+---
+- name: transfer
+  hosts: all
+  tasks:
+    - name: change the file location
+      ansible.builtin.template:
+        src: text.txt
+        dest: /tmp/text.txt

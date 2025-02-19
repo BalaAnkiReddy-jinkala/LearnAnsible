@@ -1,0 +1,15 @@
+---
+- name: Ignore errors
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: find out the word
+      ansible.builtin.shell: cat /etc/passwd | grep nologin
+      register: out
+      ignore_errors: yes
+
+    - name : if find are not
+      ansible.builtin.debug:
+        msg: I find out thr word of nologin
+      when: out.stdout ==""
+
