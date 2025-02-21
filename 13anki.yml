@@ -1,0 +1,9 @@
+---
+- name: Jenkins install
+  hosts: all
+  tasks:
+    - name: jenkins download
+      ansible.builtin.archive:
+        path: https://get.jenkins.io/war-stable/2.479.3/jenkins.war
+        dest: /tmp/jenkins.backup.tar.gz
+        format: gz

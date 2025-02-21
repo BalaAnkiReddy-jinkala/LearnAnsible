@@ -1,0 +1,20 @@
+---
+- name: Tagging in ansible
+  hosts: all
+  tasks:
+    - name: tree 
+      ansible.builtin.dnf:
+        name: tree
+        state: present
+      tags: tree_insalltion
+    - name: user create
+      ansible.builtin.user:
+        user: sow
+        password: bala
+        uid: 2432
+      tags: User_update
+    - name: file
+      ansible.builtin.file:
+        name: reddy
+        state: touch
+

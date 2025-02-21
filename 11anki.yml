@@ -1,0 +1,9 @@
+---
+- name: Install the multipule softwares
+  hosts: all
+  tasks:
+    - name: softwares downloading
+      ansible.builtin.yum:
+        name: ["tree","git","maven"]
+        state: present
+        
