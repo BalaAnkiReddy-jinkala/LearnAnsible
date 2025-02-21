@@ -1,0 +1,8 @@
+---
+- name: Download 
+  hosts: localhost
+  tasks:
+    - name: Download the file
+      ansible.builtin.yum:
+        name: "httpd"
+        state: present
