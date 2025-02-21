@@ -1,0 +1,9 @@
+---
+- name: remove
+  hosts: all
+  become: true
+  tasks:
+    - name: uninstall
+      ansible.builtin.dnf:
+        name: tree
+        state: absent

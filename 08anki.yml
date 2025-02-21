@@ -1,0 +1,12 @@
+---
+- name : Createuser
+  hosts: all
+  become: true
+  tasks:
+    - name: user 
+      ansible.builtin.user:
+        name: anki
+        password: hello
+        uid: 92435
+        comment: "hello all"
+        shell: /tmp

@@ -1,0 +1,10 @@
+---
+- name: Configuring apache2
+  hosts: all
+  become: true
+  tasks:
+    - name: apache
+      ansible.builtin.dnf:
+        name: apace2
+        state: present
+        enabled: yes
