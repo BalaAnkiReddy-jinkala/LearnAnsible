@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: Hello 
-      ansible.builtin.debug:
-        msg: king
-
+      ansible.builtin.file:
+        name: anki
+        state: touch
