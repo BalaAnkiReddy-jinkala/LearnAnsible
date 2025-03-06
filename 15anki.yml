@@ -1,5 +1,5 @@
 - name: create role
-  hosts: all
+  hosts: local
   become: true
   tasks:
     -demo
