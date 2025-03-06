@@ -1,4 +1,4 @@
 - name: create role
   hosts: local
   tasks:
-    -demo
+    - demo
