@@ -9,4 +9,4 @@
         register: out
     - name: print a ot
       ansible.builtin.debug:
-        msg : {{out}}
+        msg : "{{out}}"
