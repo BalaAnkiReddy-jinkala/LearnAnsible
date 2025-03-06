@@ -4,9 +4,8 @@
   become: true
   tasks:
     - name: run the uptime command
-      ansible.builtin.shell:
-        name: uptime
-        register: out
+      ansible.builtin.shell: uptime
+      register: out
     - name: print a ot
       ansible.builtin.debug:
         msg : "{{out}}"
