@@ -1,5 +1,12 @@
-- name: Sample
-  hosts: localhost
-  connection: local
-  roles:
-    - demo
+- name: Variable from the output section
+  host: localhost
+  connection : local
+  become: true
+  tasks:
+    - name: run the uptime command
+      ansible.builtin.shell:
+        name: uptime
+        register: out
+    - name: print a ot
+      ansible.builtin.debug:
+        msg : {{out}}
